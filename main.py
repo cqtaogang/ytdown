@@ -2,6 +2,9 @@ from __future__ import unicode_literals
 import yt_dlp
 
 
+url = ['https://www.youtube.com/shorts/ySBnYBLkaWA']
+
+url = ['https://www.bilibili.com/video/BV1Yv4y1g78C/?spm_id_from=333.788.recommend_more_video.-1&vd_source=2f8c1354ee224a9eb8d8bd87a032970b']
 class MyLogger(object):
     def debug(self, msg):
         pass
@@ -19,7 +22,8 @@ def my_hook(d):
 
 
 ydl_opts = {
-    'format': '137+140',
+    # 'format': '137+140',
+    # 'format': 'best',
     'outtmpl': r'd:\youtubedown' + '/%(title)s.%(ext)s',
     # 'postprocessors': [{
     #     'key': 'FFmpegExtractAudio',
@@ -30,4 +34,4 @@ ydl_opts = {
     # 'progress_hooks': [my_hook],
 }
 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-    ydl.download(['https://www.youtube.com/watch?v=Pqf6PG1RqWw'])
+    ydl.download(url)
