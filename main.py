@@ -4,7 +4,7 @@ import yt_dlp
 
 url = ['https://www.youtube.com/shorts/ySBnYBLkaWA']
 
-url = ['https://www.bilibili.com/video/BV1Yv4y1g78C/?spm_id_from=333.788.recommend_more_video.-1&vd_source=2f8c1354ee224a9eb8d8bd87a032970b']
+# url = ['https://www.bilibili.com/video/BV1Yv4y1g78C/?spm_id_from=333.788.recommend_more_video.-1&vd_source=2f8c1354ee224a9eb8d8bd87a032970b']
 class MyLogger(object):
     def debug(self, msg):
         pass
@@ -24,6 +24,7 @@ def my_hook(d):
 ydl_opts = {
     # 'format': '137+140',
     # 'format': 'best',
+    'listformats': True,
     'outtmpl': r'd:\youtubedown' + '/%(title)s.%(ext)s',
     # 'postprocessors': [{
     #     'key': 'FFmpegExtractAudio',
